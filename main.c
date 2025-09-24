@@ -55,7 +55,7 @@ mpenter(void)
 static void
 mpmain(void)
 {
-  cprintf("cpu%d: starting\n", cpu->id);
+  cprintf("cpu%d: starting\n\nCSE3320 proj0 printing in\nkernel space cpu%d: starting\n\n", cpu->id, cpu->id);
   idtinit();       // load idt register
   xchg(&cpu->started, 1); // tell startothers() we're up
   scheduler();     // start running processes
